@@ -1,0 +1,208 @@
+body {
+    --color1-color: rgba(34, 4, 201, 0.670);
+    --color2-color: rgba(178, 4, 201, 0.670);
+    --color3-color: rgba(201, 4, 119, 0.670);
+    --color4-color: rgba(201, 4, 30, 0.670);
+    --color5-color: rgba(201, 34, 4, 0.670);
+    --color6-color: rgba(201, 109, 4, 0.670);
+    --color7-color: rgba(4, 201, 142, 0.670);
+    --color8-color: rgba(4, 96, 201, 0.670);
+}
+
+h1 {
+    text-align: center;
+    opacity: 1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: white;
+}
+
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vw; 
+}
+
+.cube {
+    background-color: rgb(43, 0, 124);
+    width: 350px;
+    height: 350px;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.411);
+    
+}
+
+
+
+.cube2 {
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: fontbulger 20s infinite linear;
+}
+
+@keyframes fontbulger {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(405deg);
+    }
+  }
+
+.rondContainer {
+    animation: exteRond 10s infinite linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.rond {
+    background-color: var(--color1-color);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(-90deg);
+    transform-origin: bottom center;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.411);
+}
+
+.rond1 {
+    animation: rond1 13s infinite linear;
+}
+
+@keyframes exteRond {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
+.rond2 {
+    transform: translate(-50%, -100%) rotate(-45deg);
+    background-color: var(--color2-color);
+}
+
+.rond3 {
+    transform: translate(-50%, -100%) rotate(0deg);
+    background-color: var(--color3-color);
+}
+
+.rond4 {
+    transform: translate(-50%, -100%) rotate(45deg);
+    background-color: var(--color4-color);
+}
+
+.rond5 {
+    transform: translate(-50%, -100%) rotate(90deg);
+    background-color: var(--color5-color);
+}
+
+
+.rond6 {
+    transform: translate(-50%, -100%) rotate(135deg);
+    background-color: var(--color6-color);
+}
+
+.rond7 {
+    transform: translate(-50%, -100%) rotate(180deg);
+    background-color: var(--color7-color);
+}
+
+.rond8 {
+    transform: translate(-50%, -100%) rotate(225deg);
+    background-color: var(--color8-color);
+}
+
+.rondpetit {
+    background-color: var(--color2-color);
+    width: 100px;
+    height: 100px;
+    transform: translate(-360px, -50%) rotate(0deg);
+    transform-origin: 360px center;
+}
+.cubepetit {
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    transform: translate(-360px, -50%) rotate(0deg);
+    transform-origin: 360px center;
+    box-shadow: none;
+}
+.cubepetit::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color1-color);
+    border-radius: 20px;
+    transform: rotate(45deg);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.411);
+}
+.petit2 {
+    transform: translate(-350px, -50%) rotate(45deg);
+    background-color: var(--color2-color);
+}
+.petit3 {
+    transform: translate(-350px, -50%) rotate(90deg);
+}
+.petit3::after {
+    background-color: var(--color3-color);
+}
+.petit4 {
+    transform: translate(-350px, -50%) rotate(135deg);
+}
+.petit5 {
+    transform: translate(-350px, -50%) rotate(180deg);
+}
+.petit5::after {
+    background-color: var(--color5-color);
+}
+.petit6 {
+    transform: translate(-350px, -50%) rotate(225deg);
+}
+.petit7 {
+    transform: translate(-350px, -50%) rotate(270deg);
+}
+.petit7::after {
+    background-color: var(--color7-color);
+}
+.petit8 {
+    transform: translate(-350px, -50%) rotate(315deg);
+}
+
+.exterieur {
+    animation: exte 25s infinite linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes exte {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+  }
